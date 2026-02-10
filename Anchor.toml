@@ -5,8 +5,11 @@ package_manager = "yarn"
 resolution = true
 skip-lint = false
 
+[programs.devnet]
+er-vrf-delegated = "Dydacss7BXagAMpjqEj3wTUG58xXeoSW2koog92kfzPw"
+
 [programs.localnet]
-er_vrf = "DnWmup9mywreyVWkGpWNAhAkzyndRaJ7MHZRcEA65NrZ"
+er_vrf = "BxeDZYSUNHE1f7ZXfonM672ZHv5QbDzAyphuqDrrbJvs"
 
 [registry]
 url = "https://api.apr.dev"

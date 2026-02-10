@@ -9,13 +9,23 @@ pub use constants::*;
 pub use instructions::*;
 pub use state::*;
 
-declare_id!("DnWmup9mywreyVWkGpWNAhAkzyndRaJ7MHZRcEA65NrZ");
+declare_id!("BxeDZYSUNHE1f7ZXfonM672ZHv5QbDzAyphuqDrrbJvs");
 
 #[program]
 pub mod er_vrf {
     use super::*;
 
     pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
-        initialize::handler(ctx)
+        ctx.accounts.handler(ctx.bumps)
+    }
+
+    pub fn send_vrf_req(ctx: Context<SendVrfReq>, client_seed: u8) -> Result<()> {
+        ctx.accounts.send_req(client_seed)?;
+        Ok(())
+    }
+
+    pub fn callback_vrf(ctx: Context<CallbackVrf>, randomness: [u8; 32]) -> Result<()> {
+        ctx.accounts.callback(randomness)?;
+        Ok(())
     }
 }

@@ -1,12 +1,12 @@
 [package]
-name = "er-vrf"
+name = "er-vrf-delegated"
 version = "0.1.0"
 description = "Created with Anchor"
 edition = "2021"
 
 [lib]
 crate-type = ["cdylib", "lib"]
-name = "er_vrf"
+name = "er_vrf_delegated"
 
 [features]
 default = []
@@ -21,9 +21,10 @@ custom-panic = []
 
 
 [dependencies]
-anchor-lang = { version = "0.32.1", features = ["init-if-needed"] }
+anchor-lang = "0.32.1"
 ephemeral-rollups-sdk = { version = "0.8.5", features = ["anchor"] }
 ephemeral-vrf-sdk = { version = "0.2.3", features = ["anchor"] }
+
 
 [lints.rust]
 unexpected_cfgs = { level = "warn", check-cfg = ['cfg(target_os, values("solana"))'] }
