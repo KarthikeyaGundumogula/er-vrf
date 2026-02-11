@@ -5,17 +5,15 @@ package_manager = "yarn"
 resolution = true
 skip-lint = false
 
-[programs.devnet]
-er-vrf-delegated = "Dydacss7BXagAMpjqEj3wTUG58xXeoSW2koog92kfzPw"
-
 [programs.localnet]
+er-delegated-vrf = "ApfJgwefMJsMBE4PSypaxNjRM3uVQm7XKiY63gMvSauf"
 er_vrf = "BxeDZYSUNHE1f7ZXfonM672ZHv5QbDzAyphuqDrrbJvs"
 
 [registry]
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "localnet"
+cluster = "devnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]

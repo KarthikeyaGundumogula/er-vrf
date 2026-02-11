@@ -1,12 +1,12 @@
 [package]
-name = "er-vrf-delegated"
+name = "er-delegated-vrf"
 version = "0.1.0"
 description = "Created with Anchor"
 edition = "2021"
 
 [lib]
 crate-type = ["cdylib", "lib"]
-name = "er_vrf_delegated"
+name = "er_delegated_vrf"
 
 [features]
 default = []
